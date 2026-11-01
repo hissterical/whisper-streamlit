@@ -1,0 +1,1 @@
+"""EchoNote journal application package."""

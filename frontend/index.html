@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EchoNote · local voice journal</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<div class="shell">
+  <aside class="sidebar"><a class="brand" href="#analyze"><span class="brand-mark">✦</span><span>EchoNote<small>LOCAL VOICE JOURNAL</small></span></a>
+    <nav><a href="#analyze" data-nav="analyze" class="active"><b>◉</b> Analyze</a><a href="#journal" data-nav="journal"><b>☷</b> Journal</a></nav>
+    <div class="side-note"><strong>Your thoughts stay yours.</strong><p>Audio, notes, and processing stay on this machine.</p></div>
+  </aside>
+  <main><header class="topbar"><span class="status-dot"></span><span>Local workspace</span><span id="health" class="muted">checking connection…</span></header>
+    <section id="analyze" class="page active-page"><div class="hero"><span class="eyebrow">CAPTURE &amp; REFLECT</span><h1>Make space<br>for your thoughts.</h1><p>Record a voice note or bring in an audio file. We’ll find the signal, then keep the full transcript one click away.</p></div>
+      <div class="capture-card"><div class="capture-tabs"><button class="tab active" data-capture="record">● Record from microphone</button><button class="tab" data-capture="upload">↑ Upload audio</button></div>
+        <div id="record-panel" class="capture-panel"><button id="record-button" class="record-button"><span class="record-icon">●</span><span id="record-label">Start recording</span></button><p class="hint">Your browser will ask for microphone permission.</p></div>
+        <div id="upload-panel" class="capture-panel hidden"><label class="dropzone" for="audio-file"><span class="upload-icon">↑</span><strong>Choose an audio file</strong><span>WAV, MP3, M4A, WebM, OGG, or FLAC</span><input id="audio-file" type="file" accept="audio/*"></label></div>
+        <div id="audio-preview" class="preview hidden"><span>Ready to analyze</span><audio controls></audio><button id="clear-audio" class="icon-button">×</button></div>
+        <button id="analyze-button" class="primary wide" disabled>Analyze recording <span>→</span></button><div id="analysis-status" class="status hidden"></div>
+      </div><div id="result" class="result hidden"></div>
+    </section>
+    <section id="journal" class="page">    <div class="page-heading"><div><span class="eyebrow">YOUR MEMORY</span><h2>A journal in context.</h2><p>Browse what you’ve captured, notice patterns, and ask questions.</p></div><button class="primary" data-journal-capture="record">+ New thought</button></div>
+      <div class="journal-capture"><strong>Save a thought</strong><span>Record or upload directly into your private journal.</span><button class="secondary" data-journal-capture="record">● Record from microphone</button><button class="secondary" data-journal-capture="upload">↑ Upload audio</button></div>
+      <div class="journal-layout"><div class="journal-main"><div class="toolbar"><input id="search" type="search" placeholder="Search exact words…"><input id="semantic-search" type="search" placeholder="Search by meaning…"><select id="topic-filter"><option value="">All topics</option></select><select id="mood-filter"><option value="">All moods</option></select><label class="check-filter"><input id="actions-filter" type="checkbox"> Has actions</label></div><div class="view-tabs"><button class="view-tab active" data-view="timeline">Timeline</button><button class="view-tab" data-view="calendar">Calendar</button><button class="view-tab" data-view="graph">Topic graph</button></div><div id="timeline"></div><div id="calendar-view" class="visual-view hidden"></div><div id="graph-view" class="visual-view hidden"><svg id="topic-graph" viewBox="0 0 760 420" aria-label="Topic relationship graph"></svg></div></div>
+      <aside class="ask-card"><span class="eyebrow">REFLECT WITH AI</span><h3>Ask your journal</h3><p>Find connections across your saved thoughts with local Ollama.</p><textarea id="question" placeholder="What have I been putting off?"></textarea><button id="ask-button" class="secondary wide">Ask your journal <span>→</span></button><div id="answer" class="answer hidden"></div></aside></div>
+    </section>
+  </main>
+</div>
+<div id="journal-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="journal-modal-title">
+  <div class="modal-card">
+    <button id="close-journal-modal" class="modal-close" aria-label="Close">×</button>
+    <span class="eyebrow">SAVE TO JOURNAL</span><h2 id="journal-modal-title">Keep a thought</h2>
+    <div class="capture-tabs"><button class="tab active" data-journal-tab="record">● Record</button><button class="tab" data-journal-tab="upload">↑ Upload</button></div>
+    <div id="journal-record-panel" class="capture-panel"><button id="journal-record-button" class="record-button"><span class="record-icon">●</span><span id="journal-record-label">Start recording</span></button><p class="hint">This recording will be saved as a journal entry after analysis.</p></div>
+    <div id="journal-upload-panel" class="capture-panel hidden"><label class="dropzone" for="journal-audio-file"><span class="upload-icon">↑</span><strong>Choose an audio file</strong><span>WAV, MP3, M4A, WebM, OGG, or FLAC</span><input id="journal-audio-file" type="file" accept="audio/*"></label></div>
+    <div id="journal-audio-preview" class="preview hidden"><span>Ready to save</span><audio controls></audio><button id="clear-journal-audio" class="icon-button">×</button></div>
+    <button id="save-journal-button" class="primary wide" disabled>Analyze & save thought <span>→</span></button>
+    <div id="journal-status" class="status hidden"></div>
+  </div>
+</div>
+<script src="/static/app.js" defer></script>
+</body></html>
