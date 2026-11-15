@@ -1,0 +1,123 @@
+[
+  {
+    "id": "human-001",
+    "dataset_type": "human_annotated",
+    "transcript": "Had a solid discussion with Maya this morning about our database performance. Our SQLite queries were bottlenecked during concurrent reads because of journal lock contention. We decided to enable write-ahead logging mode and benchmark it tomorrow morning. I also promised to draft the migration script before our 2 PM standup.",
+    "reference_title": "Database WAL Mode and Migration",
+    "reference_summary": "Discussed database concurrency bottlenecks with Maya. Agreed to enable WAL mode in SQLite to resolve read lock contention. Will benchmark performance and draft the migration script before 2 PM.",
+    "reference_topics": ["database", "sqlite", "concurrency", "performance"],
+    "reference_mood": "focused",
+    "reference_action_items": [
+      "Enable write-ahead logging mode and benchmark tomorrow morning",
+      "Draft the migration script before 2 PM standup"
+    ],
+    "key_facts": [
+      "Met with Maya this morning",
+      "SQLite queries suffered from concurrent read lock contention",
+      "Decided to enable WAL mode",
+      "Migration script is due before 2 PM standup"
+    ],
+    "metadata": {
+      "annotator_id": "human_expert_01",
+      "domain": "software_engineering",
+      "word_count": 54
+    }
+  },
+  {
+    "id": "human-002",
+    "dataset_type": "human_annotated",
+    "transcript": "Woke up feeling pretty exhausted after the redeployment yesterday, so I took a slow walk through the park. Feeling much more grounded now. Need to remember to pick up groceries this evening: specifically olive oil, oats, and chamomile tea. I should also text Daniel to reschedule our coffee chat to Thursday afternoon.",
+    "reference_title": "Morning Walk and Errands",
+    "reference_summary": "Recovered from yesterday's deployment stress with a walk in the park. Needs to buy olive oil, oats, and chamomile tea tonight, and reschedule coffee with Daniel to Thursday.",
+    "reference_topics": ["wellness", "routine", "errands"],
+    "reference_mood": "calm",
+    "reference_action_items": [
+      "Pick up olive oil, oats, and chamomile tea this evening",
+      "Text Daniel to reschedule coffee chat to Thursday afternoon"
+    ],
+    "key_facts": [
+      "Felt exhausted after yesterday's redeployment",
+      "Took a walk through the park and feels grounded",
+      "Needs olive oil, oats, and chamomile tea",
+      "Rescheduling coffee with Daniel to Thursday afternoon"
+    ],
+    "metadata": {
+      "annotator_id": "human_expert_01",
+      "domain": "personal_wellness",
+      "word_count": 55
+    }
+  },
+  {
+    "id": "human-003",
+    "dataset_type": "human_annotated",
+    "transcript": "Thinking through our conference submission on local voice assistants. The primary contribution should be demonstrating that a 3B parameter model paired with local Whisper base achieves comparable organization quality to cloud pipelines with zero telemetry. I must finish running the retrieval evaluation benchmark tonight and write the methodology section by Wednesday.",
+    "reference_title": "Voice Assistant Conference Paper Strategy",
+    "reference_summary": "Structured the core thesis for the conference paper: local lightweight AI provides privacy and competitive organization quality. Committed to completing retrieval benchmarks tonight and drafting methodology by Wednesday.",
+    "reference_topics": ["research", "whisper", "conference", "privacy"],
+    "reference_mood": "energized",
+    "reference_action_items": [
+      "Finish running retrieval evaluation benchmark tonight",
+      "Write methodology section by Wednesday"
+    ],
+    "key_facts": [
+      "Working on conference submission for local voice assistants",
+      "Focus is on 3B models and Whisper base providing zero-telemetry organization",
+      "Retrieval benchmarks must finish tonight",
+      "Methodology section is due Wednesday"
+    ],
+    "metadata": {
+      "annotator_id": "human_expert_02",
+      "domain": "academic_research",
+      "word_count": 53
+    }
+  },
+  {
+    "id": "human-004",
+    "dataset_type": "human_annotated",
+    "transcript": "Visited the clinic for an annual checkup. Blood pressure was slightly elevated at 128 over 82, but doctor said it is manageable with better sleep and reduced sodium. She advised 30 minutes of cardio four days a week. I will schedule a follow-up appointment in six months and start tracking daily sodium intake starting Monday.",
+    "reference_title": "Annual Health Checkup Results",
+    "reference_summary": "Doctor reported slightly elevated blood pressure and recommended sleep hygiene, reduced sodium, and 30 minutes of cardio four times weekly. Scheduled six-month follow-up and tracking sodium from Monday.",
+    "reference_topics": ["health", "fitness", "doctor"],
+    "reference_mood": "reflective",
+    "reference_action_items": [
+      "Schedule a follow-up appointment in six months",
+      "Start tracking daily sodium intake starting Monday",
+      "Do 30 minutes of cardio four days a week"
+    ],
+    "key_facts": [
+      "Attended annual checkup at clinic",
+      "Blood pressure was 128/82",
+      "Doctor recommended sleep, low sodium, and cardio 4x per week",
+      "Follow-up scheduled in six months"
+    ],
+    "metadata": {
+      "annotator_id": "human_expert_02",
+      "domain": "health",
+      "word_count": 58
+    }
+  },
+  {
+    "id": "human-005",
+    "dataset_type": "human_annotated",
+    "transcript": "Finalized the flight reservations for Tokyo in April. We are landing at Haneda on April 12th and staying near Shinjuku for the first four nights. I still need to reserve the Shinkansen tickets to Kyoto and check passport expiration dates for both of us before the weekend.",
+    "reference_title": "Tokyo Trip Logistics",
+    "reference_summary": "Booked flights to Tokyo landing at Haneda on April 12th, staying in Shinjuku. Remaining tasks are reserving Kyoto bullet train tickets and checking passport expiration dates before the weekend.",
+    "reference_topics": ["travel", "japan", "vacation"],
+    "reference_mood": "excited",
+    "reference_action_items": [
+      "Reserve Shinkansen tickets to Kyoto",
+      "Check passport expiration dates before the weekend"
+    ],
+    "key_facts": [
+      "Booked flights to Tokyo for April 12th arriving at Haneda",
+      "Staying in Shinjuku for the first four nights",
+      "Planning to take Shinkansen to Kyoto",
+      "Passports need to be checked before the weekend"
+    ],
+    "metadata": {
+      "annotator_id": "human_expert_01",
+      "domain": "travel",
+      "word_count": 48
+    }
+  }
+]

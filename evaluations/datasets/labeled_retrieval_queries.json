@@ -1,0 +1,146 @@
+{
+  "corpus": [
+    {
+      "id": 101,
+      "title": "Enabling SQLite WAL Mode",
+      "summary": "Switched SQLite database configuration to write-ahead logging (WAL) mode to resolve concurrent read lock contention.",
+      "transcript": "Maya and I looked at the database locks today. SQLite in DELETE rollback mode was blocking reader threads during write checkpoints. Enabling WAL mode immediately resolved the lock contention.",
+      "topics": ["database", "sqlite", "concurrency", "performance"],
+      "mood": "focused",
+      "action_items": ["Benchmark read throughput under WAL mode"]
+    },
+    {
+      "id": 102,
+      "title": "Park Walk for Mental Recovery",
+      "summary": "Took an extended walk in the city park to unwind after high-stress production deployment.",
+      "transcript": "Spent an hour outdoors walking through the park. Feeling completely restored and calm after a hectic week of late-night releases.",
+      "topics": ["wellness", "nature", "mental_health"],
+      "mood": "calm",
+      "action_items": []
+    },
+    {
+      "id": 103,
+      "title": "Conference Paper on Local Voice AI",
+      "summary": "Outlining paper structure demonstrating private, local speech-to-text and lightweight LLM organization without cloud APIs.",
+      "transcript": "Drafted the introduction and system design for the conference paper. The core contribution is local execution with Whisper and 3B models keeping all audio private.",
+      "topics": ["research", "whisper", "privacy", "llm"],
+      "mood": "energized",
+      "action_items": ["Run retrieval accuracy benchmarks", "Draft methodology section"]
+    },
+    {
+      "id": 104,
+      "title": "Cardiovascular Health and Diet Recommendations",
+      "summary": "Doctor recommended 30 minutes of aerobic exercise four times a week and low sodium diet to control blood pressure.",
+      "transcript": "Had my annual physical examination. Blood pressure was slightly elevated. Doctor emphasized 30 minutes of cardio four days weekly and reducing salt.",
+      "topics": ["health", "fitness", "cardio", "nutrition"],
+      "mood": "reflective",
+      "action_items": ["Schedule follow-up appointment in six months", "Track daily sodium intake"]
+    },
+    {
+      "id": 105,
+      "title": "Tokyo Japan Itinerary",
+      "summary": "Booked flights landing at Haneda airport on April 12th and planned initial Shinjuku hotel stay.",
+      "transcript": "Flights to Tokyo are confirmed for April. Arriving at Haneda airport and staying four nights in Shinjuku before taking the bullet train to Kyoto.",
+      "topics": ["travel", "japan", "vacation"],
+      "mood": "excited",
+      "action_items": ["Reserve Kyoto Shinkansen bullet train tickets", "Check passport expiration dates"]
+    },
+    {
+      "id": 106,
+      "title": "Grocery Shopping List",
+      "summary": "Purchased olive oil, rolled oats, almond milk, and fresh chamomile tea at the supermarket.",
+      "transcript": "Stopped by the grocery store on the way home. Bought organic olive oil, steel-cut oats, almond milk, and chamomile tea bags.",
+      "topics": ["errands", "food", "groceries"],
+      "mood": "content",
+      "action_items": []
+    },
+    {
+      "id": 107,
+      "title": "Refactoring Audio Pipeline Memory Leaks",
+      "summary": "Investigated memory leak in audio buffer streaming; resolved by explicitly unlinking tempfiles in finally blocks.",
+      "transcript": "Observed memory growing by 100MB per audio file upload. Fixed it by implementing context-managed temporary file unlinking and garbage collection.",
+      "topics": ["debugging", "memory", "python", "audio"],
+      "mood": "satisfied",
+      "action_items": ["Add automated test for orphan file cleanup"]
+    },
+    {
+      "id": 108,
+      "title": "Quarterly Budget Planning",
+      "summary": "Completed financial spreadsheet reviewing cloud infrastructure expenditures and local hardware ROI.",
+      "transcript": "Reviewed cloud hosting costs versus local workstation amortization. Running local models yields substantial savings over cloud API calls.",
+      "topics": ["finance", "budget", "costs"],
+      "mood": "analytical",
+      "action_items": ["Submit quarterly expense forecast by Friday"]
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "q1_exact_keyword",
+      "query_text": "SQLite WAL mode concurrent reads",
+      "query_type": "keyword",
+      "relevance": {
+        "101": 3,
+        "107": 1
+      }
+    },
+    {
+      "query_id": "q2_semantic_paraphrase",
+      "query_text": "dealing with elevated blood pressure and doctor advice",
+      "query_type": "semantic",
+      "relevance": {
+        "104": 3
+      }
+    },
+    {
+      "query_id": "q3_semantic_nature",
+      "query_text": "calming outdoor relaxation and mental recovery",
+      "query_type": "semantic",
+      "relevance": {
+        "102": 3
+      }
+    },
+    {
+      "query_id": "q4_hybrid_travel",
+      "query_text": "bullet train tickets for Kyoto trip in Japan",
+      "query_type": "hybrid",
+      "relevance": {
+        "105": 3
+      }
+    },
+    {
+      "query_id": "q5_errands_groceries",
+      "query_text": "groceries bought at supermarket chamomile oats",
+      "query_type": "hybrid",
+      "relevance": {
+        "106": 3,
+        "102": 1
+      }
+    },
+    {
+      "query_id": "q6_academic_research",
+      "query_text": "academic conference submission on private speech recognition",
+      "query_type": "semantic",
+      "relevance": {
+        "103": 3,
+        "107": 1
+      }
+    },
+    {
+      "query_id": "q7_memory_leak",
+      "query_text": "memory leak audio buffer tempfile cleanup",
+      "query_type": "keyword",
+      "relevance": {
+        "107": 3,
+        "101": 1
+      }
+    },
+    {
+      "query_id": "q8_cost_savings",
+      "query_text": "cloud hosting expenses and budget ROI",
+      "query_type": "hybrid",
+      "relevance": {
+        "108": 3
+      }
+    }
+  ]
+}

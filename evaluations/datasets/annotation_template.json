@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EchoNoteAnnotationTemplate",
+  "description": "Standard schema and annotation guidelines for spoken-thought journal evaluation.",
+  "type": "object",
+  "required": [
+    "id",
+    "dataset_type",
+    "transcript",
+    "reference_title",
+    "reference_summary",
+    "reference_topics",
+    "reference_mood",
+    "reference_action_items",
+    "key_facts",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the journal entry (e.g. note-001)"
+    },
+    "dataset_type": {
+      "type": "string",
+      "enum": ["human_annotated", "synthetic_fixture"],
+      "description": "Must strictly distinguish human-annotated research data from synthetic edge-case fixtures"
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Full verbatim transcript of the spoken voice thought"
+    },
+    "reference_title": {
+      "type": "string",
+      "description": "Concise human-authored reference title (max 10 words)"
+    },
+    "reference_summary": {
+      "type": "string",
+      "description": "Concise human-authored reference summary capturing main insights (2-4 sentences)"
+    },
+    "reference_topics": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Gold topical keywords/tags identifying core subjects"
+    },
+    "reference_mood": {
+      "type": "string",
+      "description": "Dominant emotional or cognitive state (e.g. focused, energized, reflective, anxious, calm)"
+    },
+    "reference_action_items": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Concrete commitments or next steps explicitly stated by the speaker"
+    },
+    "key_facts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Atomic factual propositions that must be preserved in a faithful summary"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "annotator_id": { "type": "string" },
+        "domain": { "type": "string" },
+        "word_count": { "type": "integer" }
+      }
+    }
+  }
+}

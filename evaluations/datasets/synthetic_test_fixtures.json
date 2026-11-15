@@ -1,0 +1,65 @@
+[
+  {
+    "id": "synthetic-001",
+    "dataset_type": "synthetic_fixture",
+    "transcript": "Sitting quietly listening to the rain on the windowsill. Just watching the droplets race down the glass pane without any specific thoughts or worries. No urgency, no pending tasks, just observing the calm evening.",
+    "reference_title": "Rainy Evening Stillness",
+    "reference_summary": "Quiet observation of rain against the window with no urgent concerns or pending responsibilities.",
+    "reference_topics": ["mindfulness", "peace", "rain"],
+    "reference_mood": "calm",
+    "reference_action_items": [],
+    "key_facts": [
+      "Speaker is listening to rain on the window",
+      "No pending tasks or urgency"
+    ],
+    "metadata": {
+      "generator": "edge_case_zero_action_items",
+      "domain": "mindfulness",
+      "word_count": 31
+    }
+  },
+  {
+    "id": "synthetic-002",
+    "dataset_type": "synthetic_fixture",
+    "transcript": "Thinking about the FTS5 tokenizer in SQLite. We need to decide between porter stemmer and unicode61. Also evaluating SIMD optimizations for our embedding dot products using AVX2 instructions. I should benchmark both tokenizers on a 100k corpus.",
+    "reference_title": "FTS5 Tokenizer and SIMD Optimizations",
+    "reference_summary": "Evaluating Porter versus Unicode61 tokenizers in SQLite alongside AVX2 SIMD acceleration for vector dot products. Planning a 100k corpus benchmark.",
+    "reference_topics": ["sqlite", "fts5", "simd", "performance"],
+    "reference_mood": "analytical",
+    "reference_action_items": [
+      "Benchmark both tokenizers on a 100k corpus"
+    ],
+    "key_facts": [
+      "Evaluating Porter vs Unicode61 tokenizers for SQLite FTS5",
+      "Considering AVX2 SIMD vector dot products",
+      "Benchmarking on 100k corpus"
+    ],
+    "metadata": {
+      "generator": "technical_acronym_dense",
+      "domain": "systems_engineering",
+      "word_count": 35
+    }
+  },
+  {
+    "id": "synthetic-003",
+    "dataset_type": "synthetic_fixture",
+    "transcript": "I decided definitely not to attend the weekend networking dinner because it takes three hours of transit. Instead, I must stay home and finish the quarterly budget submission by Sunday night.",
+    "reference_title": "Weekend Prioritization and Budget Due Date",
+    "reference_summary": "Declined the weekend networking dinner due to long transit to focus on completing the quarterly budget submission by Sunday night.",
+    "reference_topics": ["priorities", "budget", "finance"],
+    "reference_mood": "decisive",
+    "reference_action_items": [
+      "Finish quarterly budget submission by Sunday night"
+    ],
+    "key_facts": [
+      "Will not attend the weekend networking dinner",
+      "Transit to dinner is three hours",
+      "Must submit quarterly budget by Sunday night"
+    ],
+    "metadata": {
+      "generator": "negation_and_conditional_action",
+      "domain": "work_productivity",
+      "word_count": 31
+    }
+  }
+]

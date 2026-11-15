@@ -1,0 +1,125 @@
+{
+  "corpus_history": [
+    {
+      "id": 1,
+      "created_at": "2026-01-15T09:00:00",
+      "title": "Apartment Lease Signing",
+      "summary": "Signed the new lease for the maple street apartment starting March 1st. Monthly rent is $1850 with utilities included.",
+      "transcript": "Signed the lease agreement today for the apartment on Maple Street. Rent is eighteen fifty a month including water and heating. Move in date is March first.",
+      "topics": ["apartment", "lease", "housing"],
+      "action_items": ["Order moving boxes", "Notify old landlord by February 1st"]
+    },
+    {
+      "id": 2,
+      "created_at": "2026-02-10T14:30:00",
+      "title": "Bicycle Purchase",
+      "summary": "Bought a used Trek road bike for $350 from a seller in Brooklyn.",
+      "transcript": "Picked up a second hand Trek bicycle in Brooklyn today for three hundred and fifty dollars. Great condition with new tires.",
+      "topics": ["cycling", "transportation"],
+      "action_items": ["Buy a secure U-lock", "Tune the front derailleur"]
+    },
+    {
+      "id": 3,
+      "created_at": "2026-03-01T18:00:00",
+      "title": "Move-In Day",
+      "summary": "Completed move into Maple Street apartment with help from Alex.",
+      "transcript": "Finally moved in. Alex helped carry the couch and desk up the three flights of stairs. Celebrated with pizza on the floor.",
+      "topics": ["apartment", "moving", "friends"],
+      "action_items": ["Unpack kitchen boxes tomorrow", "Submit change of address to post office"]
+    },
+    {
+      "id": 4,
+      "created_at": "2026-06-20T11:00:00",
+      "title": "Summer Dental Cleaning",
+      "summary": "Dental hygienist noted minor gum sensitivity and recommended a soft bristle toothbrush and flossing twice daily.",
+      "transcript": "Had my six-month dental checkup with Dr. Patel. No cavities, but she advised using a soft toothbrush and flossing every night.",
+      "topics": ["health", "dentist"],
+      "action_items": ["Switch to soft bristle toothbrush"]
+    },
+    {
+      "id": 5,
+      "created_at": "2026-09-05T16:00:00",
+      "title": "Conference Paper Acceptance",
+      "summary": "Our research paper on local audio summarization was accepted to the ACM conference with oral presentation.",
+      "transcript": "Great news today! Our submission on local privacy-preserving audio summarization got accepted for an oral presentation at ACM.",
+      "topics": ["research", "conference", "acm"],
+      "action_items": ["Prepare 15-minute slide deck", "Apply for student travel grant"]
+    },
+    {
+      "id": 6,
+      "created_at": "2026-11-14T20:00:00",
+      "title": "Conference Travel Logistics",
+      "summary": "Booked flight and hotel for the ACM conference. Hotel is booked near the convention center.",
+      "transcript": "Finished booking conference accommodations. Staying at the conference hotel from December 2nd to 6th. Need to coordinate poster printing with Alex.",
+      "topics": ["conference", "travel", "logistics"],
+      "action_items": ["Coordinate poster printing with Alex before November 25th"]
+    },
+    {
+      "id": 7,
+      "created_at": "2026-11-15T15:00:00",
+      "title": "Slide Deck Draft for Conference",
+      "summary": "Completed preliminary outline of slides focusing on local latency, FTS5 hybrid retrieval, and Whisper base performance.",
+      "transcript": "Drafted twelve slides for the ACM talk today. Focused primarily on the tradeoff between 3B local LLMs and cloud APIs, specifically emphasizing low latency and zero telemetry.",
+      "topics": ["research", "slides", "presentation"],
+      "action_items": ["Review slide deck with research advisor on Tuesday"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "qa_01_recent_entry",
+      "category": "recent_entry",
+      "question": "What is the status of my conference slide deck and when will I review it?",
+      "expected_evidence_ids": [7],
+      "gold_answer_facts": ["Drafted twelve slides", "Reviewing with research advisor on Tuesday", "Focuses on local latency and zero telemetry"],
+      "should_abstain": false
+    },
+    {
+      "id": "qa_02_older_entry",
+      "category": "older_entry",
+      "question": "How much is the monthly rent for the apartment on Maple Street?",
+      "expected_evidence_ids": [1],
+      "gold_answer_facts": ["Rent is $1850 per month", "Utilities/water/heating included"],
+      "should_abstain": false
+    },
+    {
+      "id": "qa_03_older_entry_bike",
+      "category": "older_entry",
+      "question": "What brand of bicycle did I buy and how much did it cost?",
+      "expected_evidence_ids": [2],
+      "gold_answer_facts": ["Trek road bike", "$350", "Bought in Brooklyn"],
+      "should_abstain": false
+    },
+    {
+      "id": "qa_04_multi_entry",
+      "category": "multi_entry",
+      "question": "Who has Alex helped me with across my notes, and what do I still need to coordinate with him?",
+      "expected_evidence_ids": [3, 6],
+      "gold_answer_facts": ["Alex helped move the couch and desk", "Need to coordinate poster printing before November 25th"],
+      "should_abstain": false
+    },
+    {
+      "id": "qa_05_multi_entry_conference",
+      "category": "multi_entry",
+      "question": "Trace my conference journey from acceptance to travel and presentation preparations.",
+      "expected_evidence_ids": [5, 6, 7],
+      "gold_answer_facts": ["ACM conference paper accepted for oral talk", "Staying December 2nd to 6th", "Drafted twelve slides for Tuesday advisor review"],
+      "should_abstain": false
+    },
+    {
+      "id": "qa_06_unanswerable_secret",
+      "category": "unanswerable",
+      "question": "What is my bank account PIN and investment portfolio balance?",
+      "expected_evidence_ids": [],
+      "gold_answer_facts": ["Should explicitly abstain because bank information was never recorded"],
+      "should_abstain": true
+    },
+    {
+      "id": "qa_07_unanswerable_pet",
+      "category": "unanswerable",
+      "question": "What is the name of my pet dog and when is his next vet checkup?",
+      "expected_evidence_ids": [],
+      "gold_answer_facts": ["Should explicitly abstain because no pet is mentioned in the journal"],
+      "should_abstain": true
+    }
+  ]
+}
