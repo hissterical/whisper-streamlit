@@ -1,0 +1,97 @@
+{
+  "datasets": {
+    "human_notes_count": 5,
+    "synthetic_fixtures_count": 3,
+    "total_count": 8
+  },
+  "results_by_system": {
+    "deterministic_fallback": {
+      "human_annotated": {
+        "count": 5,
+        "rouge_1_f1": 0.4055,
+        "rouge_2_f1": 0.1637,
+        "rouge_l_f1": 0.3078,
+        "key_fact_coverage": 0.85,
+        "hallucination_rate": 0.0,
+        "topic_precision": 0.05,
+        "topic_recall": 0.05,
+        "topic_f1": 0.05,
+        "action_precision": 0.2,
+        "action_recall": 0.0667,
+        "action_f1": 0.1
+      },
+      "synthetic_fixtures": {
+        "count": 3,
+        "rouge_1_f1": 0.3783,
+        "rouge_2_f1": 0.1514,
+        "rouge_l_f1": 0.2958,
+        "key_fact_coverage": 0.8889,
+        "hallucination_rate": 0.0,
+        "topic_precision": 0.1667,
+        "topic_recall": 0.1944,
+        "topic_f1": 0.1786,
+        "action_precision": 0.5,
+        "action_recall": 0.6667,
+        "action_f1": 0.5556
+      },
+      "overall": {
+        "count": 8,
+        "rouge_1_f1": 0.3953,
+        "rouge_2_f1": 0.1591,
+        "rouge_l_f1": 0.3033,
+        "key_fact_coverage": 0.8646,
+        "hallucination_rate": 0.0,
+        "topic_precision": 0.0938,
+        "topic_recall": 0.1042,
+        "topic_f1": 0.0982,
+        "action_precision": 0.3125,
+        "action_recall": 0.2917,
+        "action_f1": 0.2708
+      }
+    },
+    "ollama_llama3.2": {
+      "human_annotated": {
+        "count": 5,
+        "rouge_1_f1": 0.2779,
+        "rouge_2_f1": 0.0816,
+        "rouge_l_f1": 0.205,
+        "key_fact_coverage": 0.1,
+        "hallucination_rate": 0.2,
+        "topic_precision": 0.2333,
+        "topic_recall": 0.2333,
+        "topic_f1": 0.2286,
+        "action_precision": 0.4667,
+        "action_recall": 0.5667,
+        "action_f1": 0.5
+      },
+      "synthetic_fixtures": {
+        "count": 3,
+        "rouge_1_f1": 0.3772,
+        "rouge_2_f1": 0.1671,
+        "rouge_l_f1": 0.3371,
+        "key_fact_coverage": 0.5,
+        "hallucination_rate": 0.0,
+        "topic_precision": 0.2333,
+        "topic_recall": 0.1944,
+        "topic_f1": 0.2074,
+        "action_precision": 0.3333,
+        "action_recall": 0.3333,
+        "action_f1": 0.3333
+      },
+      "overall": {
+        "count": 8,
+        "rouge_1_f1": 0.3152,
+        "rouge_2_f1": 0.1137,
+        "rouge_l_f1": 0.2546,
+        "key_fact_coverage": 0.25,
+        "hallucination_rate": 0.125,
+        "topic_precision": 0.2333,
+        "topic_recall": 0.2188,
+        "topic_f1": 0.2206,
+        "action_precision": 0.4167,
+        "action_recall": 0.4792,
+        "action_f1": 0.4375
+      }
+    }
+  }
+}

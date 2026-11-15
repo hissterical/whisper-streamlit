@@ -1,0 +1,353 @@
+{
+  "systems": {
+    "deterministic_qa": {
+      "overall": {
+        "total_queries": 7,
+        "overall_abstention_accuracy": 0.7143,
+        "overall_fact_coverage": 0.2857,
+        "overall_citation_precision": 0.2857,
+        "overall_citation_recall": 0.4762,
+        "avg_latency_ms": 0.97
+      },
+      "by_category": {
+        "recent_entry": {
+          "count": 1,
+          "avg_latency_ms": 1.16,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 0.0,
+          "mean_citation_precision": 1.0,
+          "mean_citation_recall": 1.0
+        },
+        "older_entry": {
+          "count": 2,
+          "avg_latency_ms": 1.04,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 0.0,
+          "mean_citation_precision": 0.0,
+          "mean_citation_recall": 0.0
+        },
+        "multi_entry": {
+          "count": 2,
+          "avg_latency_ms": 0.91,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 0.0,
+          "mean_citation_precision": 0.5,
+          "mean_citation_recall": 0.1666
+        },
+        "unanswerable": {
+          "count": 2,
+          "avg_latency_ms": 0.86,
+          "abstention_accuracy": 0.0,
+          "mean_fact_coverage": 1.0,
+          "mean_citation_precision": 0.0,
+          "mean_citation_recall": 1.0
+        }
+      },
+      "queries": [
+        {
+          "id": "qa_01_recent_entry",
+          "category": "recent_entry",
+          "question": "What is the status of my conference slide deck and when will I review it?",
+          "latency_ms": 1.16,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            42
+          ],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 0.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_02_older_entry",
+          "category": "older_entry",
+          "question": "How much is the monthly rent for the apartment on Maple Street?",
+          "latency_ms": 1.18,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            36
+          ],
+          "citation_precision": 0.0,
+          "citation_recall": 0.0,
+          "fact_coverage": 0.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_03_older_entry_bike",
+          "category": "older_entry",
+          "question": "What brand of bicycle did I buy and how much did it cost?",
+          "latency_ms": 0.9,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            37
+          ],
+          "citation_precision": 0.0,
+          "citation_recall": 0.0,
+          "fact_coverage": 0.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_04_multi_entry",
+          "category": "multi_entry",
+          "question": "Who has Alex helped me with across my notes, and what do I still need to coordinate with him?",
+          "latency_ms": 0.93,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            38,
+            41
+          ],
+          "citation_precision": 0.0,
+          "citation_recall": 0.0,
+          "fact_coverage": 0.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_05_multi_entry_conference",
+          "category": "multi_entry",
+          "question": "Trace my conference journey from acceptance to travel and presentation preparations.",
+          "latency_ms": 0.89,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            40,
+            41,
+            42
+          ],
+          "citation_precision": 1.0,
+          "citation_recall": 0.3333,
+          "fact_coverage": 0.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_06_unanswerable_secret",
+          "category": "unanswerable",
+          "question": "What is my bank account PIN and investment portfolio balance?",
+          "latency_ms": 0.84,
+          "should_abstain": true,
+          "actual_abstain": false,
+          "abstention_correct": false,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [],
+          "citation_precision": 0.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 1.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        },
+        {
+          "id": "qa_07_unanswerable_pet",
+          "category": "unanswerable",
+          "question": "What is the name of my pet dog and when is his next vet checkup?",
+          "latency_ms": 0.88,
+          "should_abstain": true,
+          "actual_abstain": false,
+          "abstention_correct": false,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [],
+          "citation_precision": 0.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 1.0,
+          "answer_sample": "Based on [Entry #42] (Slide Deck Draft for Conference): Completed preliminary outline of slides focusing on local latenc"
+        }
+      ]
+    },
+    "ollama_llama3.2": {
+      "overall": {
+        "total_queries": 7,
+        "overall_abstention_accuracy": 0.8571,
+        "overall_fact_coverage": 0.6905,
+        "overall_citation_precision": 0.7143,
+        "overall_citation_recall": 0.7143,
+        "avg_latency_ms": 1223.58
+      },
+      "by_category": {
+        "recent_entry": {
+          "count": 1,
+          "avg_latency_ms": 670.84,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 0.3333,
+          "mean_citation_precision": 1.0,
+          "mean_citation_recall": 1.0
+        },
+        "older_entry": {
+          "count": 2,
+          "avg_latency_ms": 1772.32,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 0.5834,
+          "mean_citation_precision": 0.5,
+          "mean_citation_recall": 0.5
+        },
+        "multi_entry": {
+          "count": 2,
+          "avg_latency_ms": 1964.12,
+          "abstention_accuracy": 0.5,
+          "mean_fact_coverage": 0.6666,
+          "mean_citation_precision": 0.5,
+          "mean_citation_recall": 0.5
+        },
+        "unanswerable": {
+          "count": 2,
+          "avg_latency_ms": 210.67,
+          "abstention_accuracy": 1.0,
+          "mean_fact_coverage": 1.0,
+          "mean_citation_precision": 1.0,
+          "mean_citation_recall": 1.0
+        }
+      },
+      "queries": [
+        {
+          "id": "qa_01_recent_entry",
+          "category": "recent_entry",
+          "question": "What is the status of my conference slide deck and when will I review it?",
+          "latency_ms": 670.84,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            42
+          ],
+          "expected_ids": [
+            42
+          ],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 0.3333,
+          "answer_sample": "According to [Entry #42], the status of your conference slide deck is that you have completed a preliminary outline of s"
+        },
+        {
+          "id": "qa_02_older_entry",
+          "category": "older_entry",
+          "question": "How much is the monthly rent for the apartment on Maple Street?",
+          "latency_ms": 1749.78,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [],
+          "expected_ids": [
+            36
+          ],
+          "citation_precision": 0.0,
+          "citation_recall": 0.0,
+          "fact_coverage": 0.5,
+          "answer_sample": "According to Entry #36, the monthly rent for the apartment on Maple Street is $1850."
+        },
+        {
+          "id": "qa_03_older_entry_bike",
+          "category": "older_entry",
+          "question": "What brand of bicycle did I buy and how much did it cost?",
+          "latency_ms": 1794.85,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            37
+          ],
+          "expected_ids": [
+            37
+          ],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 0.6667,
+          "answer_sample": "You bought a Trek road bike, and it cost $350. [Entry #37]"
+        },
+        {
+          "id": "qa_04_multi_entry",
+          "category": "multi_entry",
+          "question": "Who has Alex helped me with across my notes, and what do I still need to coordinate with him?",
+          "latency_ms": 522.23,
+          "should_abstain": false,
+          "actual_abstain": false,
+          "abstention_correct": true,
+          "cited_ids": [
+            38,
+            41
+          ],
+          "expected_ids": [
+            38,
+            41
+          ],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 1.0,
+          "answer_sample": "Based on your journal notes, it appears that Alex has helped you with moving into the Maple Street apartment on Move-In "
+        },
+        {
+          "id": "qa_05_multi_entry_conference",
+          "category": "multi_entry",
+          "question": "Trace my conference journey from acceptance to travel and presentation preparations.",
+          "latency_ms": 3406.0,
+          "should_abstain": false,
+          "actual_abstain": true,
+          "abstention_correct": false,
+          "cited_ids": [],
+          "expected_ids": [
+            40,
+            41,
+            42
+          ],
+          "citation_precision": 0.0,
+          "citation_recall": 0.0,
+          "fact_coverage": 0.3333,
+          "answer_sample": "To trace your conference journey from acceptance to travel and presentation preparations, I'll follow the journal entrie"
+        },
+        {
+          "id": "qa_06_unanswerable_secret",
+          "category": "unanswerable",
+          "question": "What is my bank account PIN and investment portfolio balance?",
+          "latency_ms": 175.21,
+          "should_abstain": true,
+          "actual_abstain": true,
+          "abstention_correct": true,
+          "cited_ids": [],
+          "expected_ids": [],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 1.0,
+          "answer_sample": "I do not have enough information in your journal to answer this question."
+        },
+        {
+          "id": "qa_07_unanswerable_pet",
+          "category": "unanswerable",
+          "question": "What is the name of my pet dog and when is his next vet checkup?",
+          "latency_ms": 246.12,
+          "should_abstain": true,
+          "actual_abstain": true,
+          "abstention_correct": true,
+          "cited_ids": [],
+          "expected_ids": [],
+          "citation_precision": 1.0,
+          "citation_recall": 1.0,
+          "fact_coverage": 1.0,
+          "answer_sample": "I do not have enough information in your journal to answer this question. There is no entry related to a pet dog or a ve"
+        }
+      ]
+    }
+  }
+}

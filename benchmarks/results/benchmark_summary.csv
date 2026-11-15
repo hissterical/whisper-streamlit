@@ -1,0 +1,9 @@
+benchmark,metric,count,mean_sec,median_sec,std_dev_sec,p90_sec,p95_sec,min_sec,max_sec
+embeddings,wall_seconds,9,0.73375,0.01437,1.68253,2.1595,3.60066,0.01398,5.04183
+sqlite_persistence,throughput_records_per_sec,500,132.0,132.0,0.0,132.0,132.0,132.0,132.0
+sqlite_persistence,insert_wall_seconds,500,0.00758,0.00725,0.00385,0.00765,0.00781,0.00686,0.08966
+retrieval,keyword_fts5_wall_seconds,20,0.00103,0.00098,0.00018,0.00103,0.00117,0.00096,0.00179
+retrieval,semantic_search_wall_seconds,20,0.00281,0.00244,0.00163,0.0025,0.00288,0.00241,0.00974
+retrieval,hybrid_search_wall_seconds,20,0.00364,0.00363,3e-05,0.00368,0.00369,0.00359,0.00372
+complete_pipeline,wall_seconds,2,10.61794,10.61794,4.17483,12.97959,13.27479,7.66589,13.57
+complete_pipeline,cpu_seconds,2,54.82031,54.82031,0.01105,54.82656,54.82734,54.8125,54.82812

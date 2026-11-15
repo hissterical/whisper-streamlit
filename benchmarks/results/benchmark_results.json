@@ -1,0 +1,224 @@
+{
+  "environment": {
+    "os_name": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "physical_cores": 8,
+    "logical_cores": 16,
+    "total_ram_gb": 63.16,
+    "python_version": "3.13.18",
+    "torch_version": "2.7.1+cpu",
+    "cuda_available": false,
+    "device_name": "CPU",
+    "timestamp": "2026-11-15T17:20:16Z"
+  },
+  "benchmarks": {
+    "whisper_cold_load": {
+      "wall_seconds": 0.4195,
+      "cpu_seconds": 1.9531,
+      "initial_rss_bytes": 214519808,
+      "final_rss_bytes": 614821888,
+      "model_rss_bytes": 400302080
+    },
+    "whisper_transcription": {
+      "model": "base.en",
+      "audio_file": "McDonalds_LNG_061019.wav",
+      "cold_transcription": {
+        "wall_seconds": 8.5721,
+        "cpu_seconds": 57.6562,
+        "peak_rss_bytes": 812531712,
+        "text_len": 1371
+      },
+      "warm_transcription": {
+        "wall_seconds": {
+          "count": 3,
+          "mean": 6.72424,
+          "median": 6.70912,
+          "std_dev": 0.05041,
+          "p90": 6.76621,
+          "p95": 6.77335,
+          "min": 6.68312,
+          "max": 6.78048
+        },
+        "cpu_seconds": {
+          "count": 3,
+          "mean": 53.39583,
+          "median": 53.25,
+          "std_dev": 0.28009,
+          "p90": 53.625,
+          "p95": 53.67188,
+          "min": 53.21875,
+          "max": 53.71875
+        }
+      }
+    },
+    "extraction": {
+      "deterministic_fallback": {
+        "wall_seconds": {
+          "count": 30,
+          "mean": 2e-05,
+          "median": 1e-05,
+          "std_dev": 4e-05,
+          "p90": 1e-05,
+          "p95": 1e-05,
+          "min": 1e-05,
+          "max": 0.00021
+        },
+        "cpu_seconds": {
+          "count": 30,
+          "mean": 0.0,
+          "median": 0.0,
+          "std_dev": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "ollama_analysis": {
+        "wall_seconds": {
+          "count": 3,
+          "mean": 0.94633,
+          "median": 0.41332,
+          "std_dev": 0.93322,
+          "p90": 1.70179,
+          "p95": 1.86285,
+          "min": 0.40177,
+          "max": 2.02391
+        },
+        "cpu_seconds": {
+          "count": 3,
+          "mean": 0.45833,
+          "median": 0.03125,
+          "std_dev": 0.7533,
+          "p90": 1.06875,
+          "p95": 1.19844,
+          "min": 0.01562,
+          "max": 1.32812
+        }
+      }
+    },
+    "embeddings": {
+      "available": true,
+      "model": "nomic-embed-text",
+      "dim": 768,
+      "wall_seconds": {
+        "count": 9,
+        "mean": 0.73375,
+        "median": 0.01437,
+        "std_dev": 1.68253,
+        "p90": 2.1595,
+        "p95": 3.60066,
+        "min": 0.01398,
+        "max": 5.04183
+      }
+    },
+    "sqlite_persistence": {
+      "record_count": 500,
+      "total_wall_seconds": 3.7878,
+      "throughput_records_per_sec": 132.0,
+      "insert_wall_seconds": {
+        "count": 500,
+        "mean": 0.00758,
+        "median": 0.00725,
+        "std_dev": 0.00385,
+        "p90": 0.00765,
+        "p95": 0.00781,
+        "min": 0.00686,
+        "max": 0.08966
+      },
+      "db_size_bytes": 409600
+    },
+    "retrieval": {
+      "collection_size": 500,
+      "keyword_fts5_wall_seconds": {
+        "count": 20,
+        "mean": 0.00103,
+        "median": 0.00098,
+        "std_dev": 0.00018,
+        "p90": 0.00103,
+        "p95": 0.00117,
+        "min": 0.00096,
+        "max": 0.00179
+      },
+      "semantic_search_wall_seconds": {
+        "count": 20,
+        "mean": 0.00281,
+        "median": 0.00244,
+        "std_dev": 0.00163,
+        "p90": 0.0025,
+        "p95": 0.00288,
+        "min": 0.00241,
+        "max": 0.00974
+      },
+      "hybrid_search_wall_seconds": {
+        "count": 20,
+        "mean": 0.00364,
+        "median": 0.00363,
+        "std_dev": 3e-05,
+        "p90": 0.00368,
+        "p95": 0.00369,
+        "min": 0.00359,
+        "max": 0.00372
+      }
+    },
+    "journal_qa": {
+      "deterministic_qa": {
+        "wall_seconds": {
+          "count": 10,
+          "mean": 4e-05,
+          "median": 4e-05,
+          "std_dev": 1e-05,
+          "p90": 4e-05,
+          "p95": 5e-05,
+          "min": 3e-05,
+          "max": 6e-05
+        },
+        "sample_answer": "Based on [Entry #1] (Research Lab Meeting 0): Discussed automated code refactoring and AST transformation in meeting 0.",
+        "abstention": false
+      },
+      "ollama_qa": {
+        "wall_seconds": {
+          "count": 3,
+          "mean": 0.46894,
+          "median": 0.4324,
+          "std_dev": 0.2998,
+          "p90": 0.71475,
+          "p95": 0.75004,
+          "min": 0.18909,
+          "max": 0.78534
+        },
+        "sample_answer": "[Entry #4 | Date: 2026-11-13]\nTitle: Research Lab Meeting 3\nSummary: Discussed automated code refactoring and AST transformation in meeting 3.\nAction Items: Prepare slides for meeting 3\n\nAccording to Entry #4, the discussion in meeting 3 was about automated code refactoring and AST transformation.",
+        "abstention": false,
+        "evidence_count": 5
+      }
+    },
+    "complete_pipeline": {
+      "iterations": 2,
+      "use_ollama": true,
+      "wall_seconds": {
+        "count": 2,
+        "mean": 10.61794,
+        "median": 10.61794,
+        "std_dev": 4.17483,
+        "p90": 12.97959,
+        "p95": 13.27479,
+        "min": 7.66589,
+        "max": 13.57
+      },
+      "cpu_seconds": {
+        "count": 2,
+        "mean": 54.82031,
+        "median": 54.82031,
+        "std_dev": 0.01105,
+        "p90": 54.82656,
+        "p95": 54.82734,
+        "min": 54.8125,
+        "max": 54.82812
+      },
+      "final_entry_id": 2
+    }
+  }
+}

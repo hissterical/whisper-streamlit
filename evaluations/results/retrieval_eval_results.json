@@ -1,0 +1,350 @@
+{
+  "summary": {
+    "strategies": {
+      "fts5_keyword": {
+        "queries_evaluated": 8,
+        "avg_latency_ms": 0.899,
+        "mean_recall_at_1": 0.125,
+        "mean_recall_at_3": 0.125,
+        "mean_recall_at_5": 0.125,
+        "mean_mrr": 0.125,
+        "mean_ndcg_at_1": 0.125,
+        "mean_ndcg_at_3": 0.1147,
+        "mean_ndcg_at_5": 0.1147
+      },
+      "semantic_vector": {
+        "queries_evaluated": 8,
+        "avg_latency_ms": 3.124,
+        "mean_recall_at_1": 1.0,
+        "mean_recall_at_3": 1.0,
+        "mean_recall_at_5": 1.0,
+        "mean_mrr": 1.0,
+        "mean_ndcg_at_1": 1.0,
+        "mean_ndcg_at_3": 0.9957,
+        "mean_ndcg_at_5": 0.9957
+      },
+      "hybrid_rrf": {
+        "queries_evaluated": 8,
+        "avg_latency_ms": 3.625,
+        "mean_recall_at_1": 1.0,
+        "mean_recall_at_3": 1.0,
+        "mean_recall_at_5": 1.0,
+        "mean_mrr": 1.0,
+        "mean_ndcg_at_1": 1.0,
+        "mean_ndcg_at_3": 0.9957,
+        "mean_ndcg_at_5": 0.9957
+      }
+    },
+    "robustness_tests": {
+      "incompatible_dimensions": {
+        "query_dim": 384,
+        "expected_behavior": "Zero corrupt comparisons; safe dimension rejection",
+        "results_count": 0,
+        "passed": true
+      },
+      "missing_embedding_model_fallback": {
+        "vector_provided": false,
+        "expected_behavior": "Automatic fallback to keyword FTS5 search",
+        "results_count": 1,
+        "top_match_title": "Enabling SQLite WAL Mode",
+        "passed": true
+      }
+    }
+  },
+  "per_query_results": {
+    "fts5_keyword": [
+      {
+        "query_id": "q1_exact_keyword",
+        "query_type": "keyword",
+        "latency_ms": 0.744,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q2_semantic_paraphrase",
+        "query_type": "semantic",
+        "latency_ms": 1.079,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q3_semantic_nature",
+        "query_type": "semantic",
+        "latency_ms": 1.003,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q4_hybrid_travel",
+        "query_type": "hybrid",
+        "latency_ms": 0.914,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q5_errands_groceries",
+        "query_type": "hybrid",
+        "latency_ms": 0.885,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.9173,
+        "ndcg_at_5": 0.9173
+      },
+      {
+        "query_id": "q6_academic_research",
+        "query_type": "semantic",
+        "latency_ms": 0.931,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q7_memory_leak",
+        "query_type": "keyword",
+        "latency_ms": 0.826,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      },
+      {
+        "query_id": "q8_cost_savings",
+        "query_type": "hybrid",
+        "latency_ms": 0.808,
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_1": 0.0,
+        "ndcg_at_3": 0.0,
+        "ndcg_at_5": 0.0
+      }
+    ],
+    "semantic_vector": [
+      {
+        "query_id": "q1_exact_keyword",
+        "query_type": "keyword",
+        "latency_ms": 2.587,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.9828,
+        "ndcg_at_5": 0.9828
+      },
+      {
+        "query_id": "q2_semantic_paraphrase",
+        "query_type": "semantic",
+        "latency_ms": 3.641,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q3_semantic_nature",
+        "query_type": "semantic",
+        "latency_ms": 3.659,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q4_hybrid_travel",
+        "query_type": "hybrid",
+        "latency_ms": 3.632,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q5_errands_groceries",
+        "query_type": "hybrid",
+        "latency_ms": 2.554,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.9828,
+        "ndcg_at_5": 0.9828
+      },
+      {
+        "query_id": "q6_academic_research",
+        "query_type": "semantic",
+        "latency_ms": 3.762,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q7_memory_leak",
+        "query_type": "keyword",
+        "latency_ms": 2.565,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q8_cost_savings",
+        "query_type": "hybrid",
+        "latency_ms": 2.595,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      }
+    ],
+    "hybrid_rrf": [
+      {
+        "query_id": "q1_exact_keyword",
+        "query_type": "keyword",
+        "latency_ms": 2.948,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.9828,
+        "ndcg_at_5": 0.9828
+      },
+      {
+        "query_id": "q2_semantic_paraphrase",
+        "query_type": "semantic",
+        "latency_ms": 4.028,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q3_semantic_nature",
+        "query_type": "semantic",
+        "latency_ms": 4.365,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q4_hybrid_travel",
+        "query_type": "hybrid",
+        "latency_ms": 4.433,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q5_errands_groceries",
+        "query_type": "hybrid",
+        "latency_ms": 2.954,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 0.9828,
+        "ndcg_at_5": 0.9828
+      },
+      {
+        "query_id": "q6_academic_research",
+        "query_type": "semantic",
+        "latency_ms": 4.482,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q7_memory_leak",
+        "query_type": "keyword",
+        "latency_ms": 2.955,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      {
+        "query_id": "q8_cost_savings",
+        "query_type": "hybrid",
+        "latency_ms": 2.836,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_1": 1.0,
+        "ndcg_at_3": 1.0,
+        "ndcg_at_5": 1.0
+      }
+    ]
+  }
+}

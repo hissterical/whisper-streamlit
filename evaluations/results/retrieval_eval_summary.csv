@@ -1,0 +1,4 @@
+strategy,queries_evaluated,avg_latency_ms,mean_recall_at_1,mean_recall_at_3,mean_recall_at_5,mean_mrr,mean_ndcg_at_1,mean_ndcg_at_3,mean_ndcg_at_5
+fts5_keyword,8,0.899,0.125,0.125,0.125,0.125,0.125,0.1147,0.1147
+semantic_vector,8,3.124,1.0,1.0,1.0,1.0,1.0,0.9957,0.9957
+hybrid_rrf,8,3.625,1.0,1.0,1.0,1.0,1.0,0.9957,0.9957
